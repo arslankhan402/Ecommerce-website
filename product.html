@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Vybe Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page nav-page">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">V</div>
+                <div>
+                    <div class="brand-sub">Vybe Market</div>
+                    <div>Product detail</div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="btn-icon" title="Favorites" aria-label="Favorites"><i class="bi bi-heart"></i></div>
+                <div class="btn-icon cart" title="Cart" aria-label="Cart">
+                    <i class="bi bi-cart2"></i>
+                    <span class="cart-count" aria-live="polite" aria-atomic="true">0</span>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="page">
+        <div class="section-head">
+            <div>
+                <div class="eyebrow">Product</div>
+                <h2>AeroBook 14</h2>
+                <p class="section-sub">Ultra-light performance with all-day battery life.</p>
+            </div>
+            <a class="link-ghost" href="index.html#laptops">Back to Laptops</a>
+        </div>
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="card" style="min-height: 100%;">
+                <div class="thumb" style="background-image: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(255,107,107,0.25));"></div>
+                <h3>AeroBook 14</h3>
+                <p>Built for mobility with a crisp 14-inch display, fast charging, and a quiet thermal design.</p>
+                <div class="meta"><span class="price-tag">$999</span><span class="pill-subtle">In stock</span></div>
+                <div class="card-actions">
+                    <button class="add-cart-btn" data-product="AeroBook 14" data-price="999">Add to cart</button>
+                </div>
+            </div>
+            <div class="card" style="min-height:100%;">
+                <strong>Details</strong>
+                <p>Display: 14-inch QHD<br>CPU: Intel i7<br>Memory: 16GB<br>Storage: 512GB SSD</p>
+                <p>Battery: Up to 14 hours. Weight: 1.2 kg.</p>
+                <strong>Shipping & Returns</strong>
+                <p>Free shipping over $75. Free 30-day returns.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var cartCountEl = document.querySelector('.cart-count');
+            var CART_KEY = 'vybe_cart';
+            var cart = [];
+
+            function loadCart() {
+                try {
+                    var raw = localStorage.getItem(CART_KEY);
+                    if (!raw) return;
+                    var data = JSON.parse(raw);
+                    if (Array.isArray(data)) {
+                        cart = data.filter(function(item) { return item && item.product; });
+                    }
+                } catch (e) {}
+            }
+
+            function saveCart() {
+                try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) {}
+            }
+
+            function renderCount() {
+                if (!cartCountEl) return;
+                var count = cart.reduce(function(total, item) { return total + (Number(item.qty) || 1); }, 0);
+                cartCountEl.textContent = count;
+            }
+
+            function addToCart(product, price) {
+                var existing = cart.find(function(item) { return item.product === product; });
+                if (existing) { existing.qty = (existing.qty || 1) + 1; }
+                else { cart.push({ product: product, price: price, qty: 1 }); }
+                saveCart();
+                renderCount();
+            }
+
+            document.querySelectorAll('.add-cart-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var product = btn.dataset.product || 'Item';
+                    var price = parseFloat(btn.dataset.price || '0');
+                    addToCart(product, price);
+                });
+            });
+
+            loadCart();
+            renderCount();
+        })();
+    </script>
+</body>
+</html>
