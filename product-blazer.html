@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Structure Blazer | Vybe Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page nav-page">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">V</div>
+                <div>
+                    <div class="brand-sub">Vybe Market</div>
+                    <div>Product detail</div>
+                </div>
+            </div>
+            <div class="search-wrap">
+                <div class="search-drop open">
+                    <div class="search-inner">
+                        <i class="bi bi-search"></i>
+                        <input type="search" placeholder="Search products..." aria-label="Search products">
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="btn-icon" title="Favorites" aria-label="Favorites"><i class="bi bi-heart"></i></div>
+                <div class="btn-icon cart cart-toggle" title="Cart" aria-label="Cart"><i class="bi bi-cart2"></i><span class="cart-count">0</span></div>
+            </div>
+        </header>
+    </div>
+
+    <div class="page">
+        <div class="section-head">
+            <div>
+                <div class="eyebrow">Product</div>
+                <h2>Soft Structure Blazer</h2>
+                <p class="section-sub">Relaxed tailoring with stretch for hybrid days.</p>
+            </div>
+            <a class="link-ghost" href="index.html#featured">Back to Featured</a>
+        </div>
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="card" style="min-height: 100%;">
+                <div class="thumb" style="background-image: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(255,107,107,0.25));"></div>
+                <h3>Soft Structure Blazer</h3>
+                <p>Premium knit blend with hidden stretch panels, breathable lining, and clean lines for all-day polish.</p>
+                <div class="meta"><span class="price-tag">$148</span><span class="pill-subtle">In stock</span></div>
+                <div class="card-actions">
+                    <button class="add-cart-btn" data-product="Soft Structure Blazer" data-price="148">Add to cart</button>
+                </div>
+            </div>
+            <div class="card" style="min-height:100%;">
+                <strong>Details</strong>
+                <p>Fabric: 62% polyester, 33% viscose, 5% elastane<br>Care: Machine wash cold, lay flat to dry</p>
+                <p>Fit: Tailored, moves with you. Length hits at hip.</p>
+                <strong>Shipping & Returns</strong>
+                <p>Free shipping over $75. Free 30-day returns.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.add-cart-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() { alert('Added to cart'); });
+        });
+    </script>
+</body>
+</html>

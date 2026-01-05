@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Vybe Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page" style="max-width: 960px;">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">V</div>
+                <div>
+                    <div class="brand-sub">Vybe Market</div>
+                    <div>Checkout</div>
+                </div>
+            </div>
+        </header>
+
+        <main style="margin-top: 20px;">
+            <div class="section-head centered">
+                <h2>Checkout</h2>
+                <span>Review your order and complete payment</span>
+            </div>
+            <div class="card" style="gap: 16px;">
+                <div><strong>Contact</strong><br><input type="email" placeholder="Email" style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);"></div>
+                <div><strong>Shipping</strong><br><input type="text" placeholder="Address" style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);margin-top:8px;"></div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <input type="text" placeholder="City" style="flex:1;min-width:180px;padding:12px;border-radius:10px;border:1px solid var(--line);">
+                    <input type="text" placeholder="Postal code" style="flex:1;min-width:140px;padding:12px;border-radius:10px;border:1px solid var(--line);">
+                </div>
+                <button class="checkout-btn" type="button" style="width:100%;">Continue to payment</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

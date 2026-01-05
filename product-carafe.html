@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Carafe Set | Vybe Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page nav-page">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">V</div>
+                <div>
+                    <div class="brand-sub">Vybe Market</div>
+                    <div>Product detail</div>
+                </div>
+            </div>
+            <div class="search-wrap">
+                <div class="search-drop open">
+                    <div class="search-inner">
+                        <i class="bi bi-search"></i>
+                        <input type="search" placeholder="Search products..." aria-label="Search products">
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="btn-icon" title="Favorites" aria-label="Favorites"><i class="bi bi-heart"></i></div>
+                <div class="btn-icon cart cart-toggle" title="Cart" aria-label="Cart"><i class="bi bi-cart2"></i><span class="cart-count">0</span></div>
+            </div>
+        </header>
+    </div>
+
+    <div class="page">
+        <div class="section-head">
+            <div>
+                <div class="eyebrow">Product</div>
+                <h2>Ripple Carafe Set</h2>
+                <p class="section-sub">Mouth-blown glassware that levels up your table.</p>
+            </div>
+            <a class="link-ghost" href="index.html#featured">Back to Featured</a>
+        </div>
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="card" style="min-height: 100%;">
+                <div class="thumb" style="background-image: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(99,102,241,0.16));"></div>
+                <h3>Ripple Carafe Set</h3>
+                <p>Hand-finished carafe with two matching tumblers, stacking-friendly with a textured ripple surface.</p>
+                <div class="meta"><span class="price-tag">$68</span><span class="pill-subtle">New color</span></div>
+                <div class="card-actions">
+                    <button class="add-cart-btn" data-product="Ripple Carafe Set" data-price="68">Add to cart</button>
+                </div>
+            </div>
+            <div class="card" style="min-height:100%;">
+                <strong>Details</strong>
+                <p>Material: Borosilicate glass<br>Capacity: 28 oz carafe, 10 oz tumblers</p>
+                <p>Care: Dishwasher safe, hand-wash recommended for longevity.</p>
+                <strong>Shipping & Returns</strong>
+                <p>Free shipping over $75. Free 30-day returns.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.add-cart-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() { alert('Added to cart'); });
+        });
+    </script>
+</body>
+</html>
