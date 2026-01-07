@@ -24,6 +24,8 @@
             <nav class="nav-links" aria-label="Primary" id="primary-nav">
                 <a href="#home" class="active">Home</a>
                 <a href="#featured">Featured</a>
+                <a href="#laptops">Laptops</a>
+                <a href="#phones">Phones</a>
                 <a href="#testimonials">Testimonials</a>
             </nav>
             <div class="actions">
@@ -33,13 +35,25 @@
                 <div class="btn-icon search-toggle" title="Search" aria-label="Search">
                     <i class="bi bi-search"></i>
                 </div>
-                <div class="search-box" id="search-box">
+                <form class="search-box" id="search-box" role="search">
                     <i class="bi bi-search"></i>
                     <input type="search" id="product-search" placeholder="Search products..." aria-label="Search products">
                     <button class="search-clear" type="button" aria-label="Clear search">&times;</button>
-                </div>
-                <div class="btn-icon" title="Favorites" aria-label="Favorites">
-                    <i class="bi bi-heart"></i>
+                </form>
+                <div class="favorites">
+                    <button class="btn-icon favorites-toggle" type="button" title="Favorites" aria-label="Favorites" aria-expanded="false">
+                        <i class="bi bi-heart"></i>
+                        <span class="favorites-count" aria-live="polite" aria-atomic="true">0</span>
+                    </button>
+                    <div class="favorites-panel" aria-hidden="true">
+                        <div class="favorites-header">
+                            <strong>Favorites</strong>
+                            <button class="favorites-clear" type="button">Clear</button>
+                        </div>
+                        <div class="favorites-list">
+                            <div class="favorites-empty">No favorites yet.</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn-icon cart cart-toggle" title="Cart" aria-label="Cart">
                     <i class="bi bi-cart2"></i>
@@ -57,7 +71,7 @@
                     <h1>Upgrade your daily kit with design-led essentials.</h1>
                     <p>From tailored layers to smart tech, we curate pieces that move with you, crafted to last, delivered fast.</p>
                     <div class="hero-actions">
-                        <button class="btn primary">Explore</button>
+                        <a class="btn primary" href="explore.html">Explore</a>
                         <button class="btn secondary">Shop Now</button>
                     </div>
                 </div>
@@ -179,7 +193,7 @@
                     </article>
                 </div>
             </section>
-            <div class="search-no-results" aria-live="polite">No products match your search.</div>
+            <div class="search-no-results" aria-live="polite">Item Not Found</div>
 
             <section class="featured-section" id="laptops">
                 <div class="section-head centered">
@@ -720,58 +734,6 @@
         })();
 
         (function() {
-            var searchBox = document.getElementById('search-box');
-            var searchInput = document.getElementById('product-search');
-            var clearBtn = document.querySelector('.search-clear');
-            var toggleBtn = document.querySelector('.search-toggle');
-            var productCards = Array.from(document.querySelectorAll('.product-grid .card'));
-            var noResults = document.querySelector('.search-no-results');
-
-            function applyFilter() {
-                var q = (searchInput && searchInput.value ? searchInput.value : '').trim().toLowerCase();
-                var matches = 0;
-                productCards.forEach(function(card) {
-                    var text = (card.dataset.product || card.innerText || '').toLowerCase();
-                    var isExtra = card.dataset.extra === 'true';
-                    var hit = q ? text.indexOf(q) !== -1 : !isExtra;
-                    card.classList.toggle('hidden', !hit);
-                    if (hit) { matches += 1; }
-                });
-                if (noResults) { noResults.style.display = matches ? 'none' : 'block'; }
-            }
-
-            if (toggleBtn && searchBox) {
-                toggleBtn.addEventListener('click', function() {
-                    searchBox.classList.toggle('open');
-                    if (searchBox.classList.contains('open') && searchInput) {
-                        searchInput.focus();
-                    }
-                });
-            }
-
-            if (searchInput) {
-                searchInput.addEventListener('input', applyFilter);
-                searchInput.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape') {
-                        searchBox.classList.remove('open');
-                        searchInput.value = '';
-                        applyFilter();
-                    }
-                });
-            }
-
-            if (clearBtn && searchInput) {
-                clearBtn.addEventListener('click', function() {
-                    searchInput.value = '';
-                    applyFilter();
-                    searchInput.focus();
-                });
-            }
-
-            applyFilter();
-        })();
-
-        (function() {
             var toggle = document.querySelector('.nav-toggle');
             var nav = document.getElementById('primary-nav');
             if (!toggle || !nav) return;
@@ -821,5 +783,8 @@
         })();
 
     </script>
+    <script src="search.js"></script>
+    <script src="favorites.js"></script>
 </body>
 </html>
+

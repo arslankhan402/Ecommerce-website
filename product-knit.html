@@ -20,16 +20,30 @@
                     <div>Product detail</div>
                 </div>
             </div>
-            <div class="search-wrap">
-                <div class="search-drop open">
-                    <div class="search-inner">
-                        <i class="bi bi-search"></i>
-                        <input type="search" placeholder="Search products..." aria-label="Search products">
+            <div class="actions">
+                <div class="btn-icon search-toggle" title="Search" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </div>
+                <form class="search-box" id="search-box" role="search">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="product-search" placeholder="Search products..." aria-label="Search products">
+                    <button class="search-clear" type="button" aria-label="Clear search">&times;</button>
+                </form>
+                <div class="favorites">
+                    <button class="btn-icon favorites-toggle" type="button" title="Favorites" aria-label="Favorites" aria-expanded="false">
+                        <i class="bi bi-heart"></i>
+                        <span class="favorites-count" aria-live="polite" aria-atomic="true">0</span>
+                    </button>
+                    <div class="favorites-panel" aria-hidden="true">
+                        <div class="favorites-header">
+                            <strong>Favorites</strong>
+                            <button class="favorites-clear" type="button">Clear</button>
+                        </div>
+                        <div class="favorites-list">
+                            <div class="favorites-empty">No favorites yet.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="actions">
-                <div class="btn-icon" title="Favorites" aria-label="Favorites"><i class="bi bi-heart"></i></div>
                 <div class="btn-icon cart cart-toggle" title="Cart" aria-label="Cart"><i class="bi bi-cart2"></i><span class="cart-count">0</span></div>
             </div>
         </header>
@@ -69,5 +83,7 @@
             btn.addEventListener('click', function() { alert('Added to cart'); });
         });
     </script>
+    <script src="search.js"></script>
+    <script src="favorites.js"></script>
 </body>
 </html>

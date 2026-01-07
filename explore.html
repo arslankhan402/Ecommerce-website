@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore All Products | Vybe Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="promo-bar">Flash Sale: Up to 30% Off</div>
+    <div class="page">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">V</div>
+                <div>
+                    <div class="brand-sub">Vybe Market</div>
+                    <div>Explore all</div>
+                </div>
+            </div>
+            <nav class="nav-links" aria-label="Explore">
+                <a href="explore.html#featured" class="active">Featured</a>
+                <a href="explore.html#laptops">Laptops</a>
+                <a href="explore.html#phones">Phones</a>
+                <a href="index.html#home">Back to home</a>
+            </nav>
+            <div class="actions">
+                <div class="btn-icon search-toggle" title="Search" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </div>
+                <form class="search-box" id="search-box" role="search">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="product-search" placeholder="Search products..." aria-label="Search products">
+                    <button class="search-clear" type="button" aria-label="Clear search">&times;</button>
+                </form>
+                <div class="favorites">
+                    <button class="btn-icon favorites-toggle" type="button" title="Favorites" aria-label="Favorites" aria-expanded="false">
+                        <i class="bi bi-heart"></i>
+                        <span class="favorites-count" aria-live="polite" aria-atomic="true">0</span>
+                    </button>
+                    <div class="favorites-panel" aria-hidden="true">
+                        <div class="favorites-header">
+                            <strong>Favorites</strong>
+                            <button class="favorites-clear" type="button">Clear</button>
+                        </div>
+                        <div class="favorites-list">
+                            <div class="favorites-empty">No favorites yet.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-icon cart cart-toggle" title="Cart" aria-label="Cart">
+                    <i class="bi bi-cart2"></i>
+                    <span class="cart-count" aria-live="polite" aria-atomic="true">0</span>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="page">
+        <main>
+            <section class="featured-section" id="featured">
+                <div class="section-head centered">
+                    <h2>Featured picks</h2>
+                    <span>New arrivals and limited stock</span>
+                </div>
+                <div class="product-grid">
+                    <article class="card" data-product="Soft Structure Blazer">
+                        <div class="thumb"><span class="badge">New</span></div>
+                        <h3>Soft Structure Blazer</h3>
+                        <p>Relaxed tailoring with stretch for hybrid days.</p>
+                        <div class="meta"><span class="price-tag">$148</span><span class="pill-subtle">Express ship</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="Soft Structure Blazer" data-price="148">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product-blazer.html">View details</a>
+                    </article>
+                    <article class="card" data-product="Everyday Knit Set">
+                        <div class="thumb"><span class="badge" style="background: rgba(255,255,255,0.9); color: var(--accent);">-20%</span></div>
+                        <h3>Everyday Knit Set</h3>
+                        <p>Breathable ribbed cotton, mix-and-match separates.</p>
+                        <div class="meta"><span class="price-tag">$72</span><span class="pill-subtle" style="background: rgba(16,185,129,0.12); color: var(--success);">Eco</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="Everyday Knit Set" data-price="72">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product-knit.html">View details</a>
+                    </article>
+                    <article class="card" data-product="Analog Smart Speaker">
+                        <div class="thumb"><span class="badge">Best seller</span></div>
+                        <h3>Analog Smart Speaker</h3>
+                        <p>Warm soundstage, multi-room ready, tactile controls.</p>
+                        <div class="meta"><span class="price-tag">$189</span><span class="pill-subtle">Ships today</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="Analog Smart Speaker" data-price="189">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product-speaker.html">View details</a>
+                    </article>
+                    <article class="card" data-product="Ripple Carafe Set">
+                        <div class="thumb"><span class="badge" style="background: rgba(255,255,255,0.9); color: var(--warning);">Low stock</span></div>
+                        <h3>Ripple Carafe Set</h3>
+                        <p>Mouth-blown glassware that levels up your table.</p>
+                        <div class="meta"><span class="price-tag">$68</span><span class="pill-subtle">New color</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="Ripple Carafe Set" data-price="68">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product-carafe.html">View details</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="featured-section" id="laptops">
+                <div class="section-head centered">
+                    <h2>Latest laptops</h2>
+                    <span>Work, play, and create on the go</span>
+                </div>
+                <div class="product-grid" data-section="laptops">
+                    <article class="card" data-product="AeroBook 14">
+                        <div class="thumb"><span class="badge">New</span></div>
+                        <h3>AeroBook 14</h3>
+                        <p>Ultra-light 14-inch laptop with all-day battery.</p>
+                        <div class="meta"><span class="price-tag">$999</span><span class="pill-subtle">Intel i7</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="AeroBook 14" data-price="999">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="StudioPro 16">
+                        <div class="thumb"><span class="badge">Hot</span></div>
+                        <h3>StudioPro 16</h3>
+                        <p>Creator-ready 16-inch display with pro GPU.</p>
+                        <div class="meta"><span class="price-tag">$1499</span><span class="pill-subtle">RTX 4060</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="StudioPro 16" data-price="1499">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="NoteFlex 13">
+                        <div class="thumb"><span class="badge">2-in-1</span></div>
+                        <h3>NoteFlex 13</h3>
+                        <p>Convertible laptop with pen support.</p>
+                        <div class="meta"><span class="price-tag">$899</span><span class="pill-subtle">Touch</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="NoteFlex 13" data-price="899">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="Titan X15">
+                        <div class="thumb"><span class="badge">Pro</span></div>
+                        <h3>Titan X15</h3>
+                        <p>High-performance laptop for heavy workloads.</p>
+                        <div class="meta"><span class="price-tag">$1799</span><span class="pill-subtle">i9 + 32GB</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="Titan X15" data-price="1799">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="SwiftAir 15">
+                        <div class="thumb"><span class="badge">Slim</span></div>
+                        <h3>SwiftAir 15</h3>
+                        <p>Edge-to-edge display with thin bezels.</p>
+                        <div class="meta"><span class="price-tag">$1099</span><span class="pill-subtle">OLED</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="SwiftAir 15" data-price="1099">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="CloudBook 13">
+                        <div class="thumb"><span class="badge">Quiet</span></div>
+                        <h3>CloudBook 13</h3>
+                        <p>Fanless design with instant wake.</p>
+                        <div class="meta"><span class="price-tag">$849</span><span class="pill-subtle">M2</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="CloudBook 13" data-price="849">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="ForgeBook 17">
+                        <div class="thumb"><span class="badge">Gaming</span></div>
+                        <h3>ForgeBook 17</h3>
+                        <p>High-refresh display for smooth play.</p>
+                        <div class="meta"><span class="price-tag">$1899</span><span class="pill-subtle">240Hz</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="ForgeBook 17" data-price="1899">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="featured-section" id="phones">
+                <div class="section-head centered">
+                    <h2>Trending phones</h2>
+                    <span>Powerful cameras and all-day battery</span>
+                </div>
+                <div class="product-grid" data-section="phones">
+                    <article class="card" data-product="iPhone Nova">
+                        <div class="thumb"><span class="badge">New</span></div>
+                        <h3>iPhone Nova</h3>
+                        <p>All-screen OLED with advanced cameras.</p>
+                        <div class="meta"><span class="price-tag">$1099</span><span class="pill-subtle">128GB</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="iPhone Nova" data-price="1099">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="Pixel Pro X">
+                        <div class="thumb"><span class="badge">AI</span></div>
+                        <h3>Pixel Pro X</h3>
+                        <p>Smart photo tools and clean Android UI.</p>
+                        <div class="meta"><span class="price-tag">$899</span><span class="pill-subtle">256GB</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="Pixel Pro X" data-price="899">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="Galaxy Edge Z">
+                        <div class="thumb"><span class="badge">Ultra</span></div>
+                        <h3>Galaxy Edge Z</h3>
+                        <p>Flagship camera with 120Hz display.</p>
+                        <div class="meta"><span class="price-tag">$999</span><span class="pill-subtle">5G</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="Galaxy Edge Z" data-price="999">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="iPhone Mini Air">
+                        <div class="thumb"><span class="badge">Compact</span></div>
+                        <h3>iPhone Mini Air</h3>
+                        <p>Small size, big performance.</p>
+                        <div class="meta"><span class="price-tag">$699</span><span class="pill-subtle">128GB</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="iPhone Mini Air" data-price="699">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="OnePlus Wave">
+                        <div class="thumb"><span class="badge">Fast</span></div>
+                        <h3>OnePlus Wave</h3>
+                        <p>Super-fast charging with smooth UI.</p>
+                        <div class="meta"><span class="price-tag">$799</span><span class="pill-subtle">80W</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="OnePlus Wave" data-price="799">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="ZenPhone Lite">
+                        <div class="thumb"><span class="badge">Value</span></div>
+                        <h3>ZenPhone Lite</h3>
+                        <p>Balanced specs at a budget-friendly price.</p>
+                        <div class="meta"><span class="price-tag">$499</span><span class="pill-subtle">128GB</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="ZenPhone Lite" data-price="499">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                    <article class="card" data-product="Moto Edge Play">
+                        <div class="thumb"><span class="badge">Battery</span></div>
+                        <h3>Moto Edge Play</h3>
+                        <p>All-day battery with smooth 90Hz screen.</p>
+                        <div class="meta"><span class="price-tag">$549</span><span class="pill-subtle">5000mAh</span></div>
+                        <div class="card-actions">
+                            <button class="add-cart-btn" data-product="Moto Edge Play" data-price="549">Add to cart</button>
+                        </div>
+                        <a class="card-details-link" href="product.html">View details</a>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="cart-drawer" aria-hidden="true">
+        <div class="cart-overlay cart-toggle" aria-label="Close cart"></div>
+        <aside class="cart-panel" role="dialog" aria-modal="true" aria-label="Cart">
+            <div class="cart-header">
+                <strong>Your cart</strong>
+                <button class="cart-close cart-toggle" type="button" aria-label="Close cart">A-</button>
+            </div>
+            <div class="cart-items" aria-live="polite">
+                <div class="cart-empty">Your cart is empty.</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total"><span>Total</span><span class="cart-total-amount">$0.00</span></div>
+                <button class="checkout-btn" type="button">Checkout</button>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        (function() {
+            var cartCountEl = document.querySelector('.cart-count');
+            var cartDrawer = document.querySelector('.cart-drawer');
+            var cartItemsEl = document.querySelector('.cart-items');
+            var cartTotalEl = document.querySelector('.cart-total-amount');
+            var checkoutBtn = document.querySelector('.checkout-btn');
+            var CART_KEY = 'vybe_cart';
+            var cart = [];
+
+            function toggleCart(forceOpen) {
+                if (!cartDrawer) return;
+                var isOpen = cartDrawer.classList.contains('open');
+                var nextState = typeof forceOpen === 'boolean' ? forceOpen : !isOpen;
+                cartDrawer.classList.toggle('open', nextState);
+                cartDrawer.setAttribute('aria-hidden', nextState ? 'false' : 'true');
+            }
+
+            function renderCartCount() {
+                if (!cartCountEl) return;
+                cartCountEl.textContent = cart.reduce(function(total, item) { return total + item.qty; }, 0);
+            }
+
+            function renderCartList() {
+                if (!cartItemsEl || !cartTotalEl) return;
+                if (!cart.length) {
+                    cartItemsEl.innerHTML = '<div class="cart-empty">Your cart is empty.</div>';
+                    cartTotalEl.textContent = '$0.00';
+                    return;
+                }
+                var total = 0;
+                cartItemsEl.innerHTML = '';
+                cart.forEach(function(item) {
+                    total += item.price * item.qty;
+                    var row = document.createElement('div');
+                    row.className = 'cart-item';
+                    row.innerHTML = '<div><strong>' + item.product + '</strong><span style="display:block;">x' + item.qty + ' - $' + item.price.toFixed(2) + '</span></div><button class="cart-remove" type="button" data-product="' + item.product + '">Remove</button>';
+                    cartItemsEl.appendChild(row);
+                });
+                cartTotalEl.textContent = '$' + total.toFixed(2);
+            }
+
+            function saveCart() {
+                try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) {}
+            }
+
+            function loadCart() {
+                try {
+                    var raw = localStorage.getItem(CART_KEY);
+                    if (!raw) return;
+                    var data = JSON.parse(raw);
+                    if (Array.isArray(data)) {
+                        cart = data.filter(function(item) { return item && item.product; }).map(function(item) {
+                            return {
+                                product: String(item.product),
+                                price: Number(item.price) || 0,
+                                qty: Number(item.qty) > 0 ? Number(item.qty) : 1
+                            };
+                        });
+                    }
+                } catch (e) {}
+            }
+
+            function addToCart(product, price) {
+                var existing = cart.find(function(item) { return item.product === product; });
+                if (existing) { existing.qty += 1; }
+                else { cart.push({ product: product, price: price, qty: 1 }); }
+                renderCartCount();
+                renderCartList();
+                saveCart();
+                toggleCart(true);
+            }
+
+            function removeFromCart(product) {
+                var idx = cart.findIndex(function(item) { return item.product === product; });
+                if (idx === -1) { return; }
+                var item = cart[idx];
+                if (item.qty > 1) { item.qty -= 1; } else { cart.splice(idx, 1); }
+                renderCartCount();
+                renderCartList();
+                saveCart();
+            }
+
+            document.querySelectorAll('.add-cart-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var product = btn.dataset.product || 'Item';
+                    var price = parseFloat(btn.dataset.price || '0');
+                    addToCart(product, price);
+                });
+            });
+
+            if (cartItemsEl) {
+                cartItemsEl.addEventListener('click', function(e) {
+                    var removeBtn = e.target.closest('.cart-remove');
+                    if (removeBtn) { removeFromCart(removeBtn.dataset.product); }
+                });
+            }
+
+            document.querySelectorAll('.cart-toggle').forEach(function(btn) {
+                btn.addEventListener('click', function(event) {
+                    if (btn.tagName.toLowerCase() === 'a') { event.preventDefault(); }
+                    toggleCart();
+                });
+            });
+
+            if (checkoutBtn) { checkoutBtn.addEventListener('click', function() { window.location.href = 'checkout.html'; }); }
+
+            loadCart();
+            renderCartCount();
+            renderCartList();
+        })();
+    </script>
+    <script src="search.js"></script>
+    <script src="favorites.js"></script>
+</body>
+</html>
